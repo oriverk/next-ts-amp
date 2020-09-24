@@ -5,12 +5,22 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "bs": "next build && next start"
   },
   "dependencies": {
+    "date-fns": "^2.16.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "lqip-loader": "^2.2.1",
     "next": "latest",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "responsive-loader": "^2.1.1",
+    "sharp": "^0.26.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
