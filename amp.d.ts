@@ -15,7 +15,7 @@ declare namespace JSX {
     sizes?: string;
     heights?: string;
     layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive';
-    fallback?: any;
+    fallback?: '';
 
     on?: string; // amp-image-lightbox
     role?: string;
@@ -46,8 +46,21 @@ declare namespace JSX {
     className?: string;
     id?: string;
 
-    first?: boolean | string; // for amp-image-slider
-    second?: boolean | string; // 確実に駄目な方法。あとで治そう
+    first?: ''; // for amp-image-slider
+    second?: ''; // 確実に駄目な方法。あとで治そう
+  }
+
+  interface AmpCarousel extends ReactApp {
+    children: React.ReactNode;
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive';
+    width: string;
+    height: string;
+    type: 'slides' | 'carousel';
+    role: 'region' | 'list' | 'listitem';
+    controls?: '';
+    loop?: '';
+    autoplay?: '';
+    delay?: string;
   }
 
   interface IntrinsicElements {
@@ -55,6 +68,8 @@ declare namespace JSX {
     'amp-sidebar': AmpSidebar;
     'amp-image-lightbox': AmpImageLightbox;
     'amp-image-slider': AmpImageSlider;
-    'div': Div;
+    'div': Div; // this is only for temporaly
+    'amp-carousel': AmpCarousel;
+
   }
 }
