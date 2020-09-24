@@ -20,11 +20,11 @@ const Layout = ({ children, title = 'This is the default title', isAmp }: Props)
     <header>
       <nav>
         <Link href="/">
-          <a>Full AMP</a>
+          <a>Home( full )</a>
         </Link>{' '}
         |{' '}
         <Link href="/amp-img">
-          <a>amp-img and others</a>
+          <a>amp-img</a>
         </Link>{' '}
         |{' '}
         <Link href="/hybrid">
