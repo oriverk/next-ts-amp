@@ -5,29 +5,27 @@ import Head from 'next/head'
 type Props = {
   children?: ReactNode
   title?: string
+  isAmp?: boolean
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, title = 'This is the default title', isAmp }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      {!isAmp && (
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+      )}
     </Head>
     <header>
       <nav>
         <Link href="/">
-          <a>Home</a>
+          <a>Full AMP</a>
         </Link>{' '}
         |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
+        <Link href="/hybrid">
+          <a>Hybrid AMP</a>
+        </Link>
       </nav>
     </header>
     {children}
