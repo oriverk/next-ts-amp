@@ -5,7 +5,7 @@ declare namespace JSX {
   >;
   
   interface AmpImg extends ReactAmp {
-    children?: React.ReactNode;
+    // children?: React.ReactNode;
     alt?: string;
     attribution?: string;
     src?: string;
@@ -16,6 +16,10 @@ declare namespace JSX {
     heights?: string;
     layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive';
     fallback?: any;
+
+    on?: string; // amp-image-lightbox
+    role?: string;
+    tabindex?: string;
   }
 
   interface AmpSidebar extends ReactAmp {
@@ -25,8 +29,14 @@ declare namespace JSX {
     layout: 'nodisplay';
   }
 
+  interface AmpImageLightbox extends ReactAmp {
+    id?: string;
+    layout: 'nodisplay';
+  }
+
   interface IntrinsicElements {
     'amp-img': AmpImg;
     'amp-sidebar': AmpSidebar;
+    'amp-image-lightbox': AmpImageLightbox;
   }
 }
