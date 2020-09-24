@@ -5,7 +5,6 @@ const { resolve } = require('path')
 
 const nextConfig = {
   webpack: (config) => {
-    // next-optimized-images
     config.resolve.alias['@public/assets'] = resolve(__dirname, 'public/assets')
     return config
   },
