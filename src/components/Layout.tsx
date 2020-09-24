@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'This is the default title', isAmp }: Props) => (
-  <div>
+  <React.Fragment>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -23,17 +23,28 @@ const Layout = ({ children, title = 'This is the default title', isAmp }: Props)
           <a>Full AMP</a>
         </Link>{' '}
         |{' '}
+        <Link href="/amp-img">
+          <a>amp-img and others</a>
+        </Link>{' '}
+        |{' '}
         <Link href="/hybrid">
           <a>Hybrid AMP</a>
         </Link>
       </nav>
     </header>
-    {children}
+    <main>
+      {children}
+    </main>
     <footer>
       <hr />
       <span>I'm here to stay (Footer)</span>
     </footer>
-  </div>
+    <style jsx>{`
+      main{
+        width: 100%;
+      }
+    `}</style>
+  </React.Fragment>
 )
 
 export default Layout
