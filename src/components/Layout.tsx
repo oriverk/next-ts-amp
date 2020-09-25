@@ -12,22 +12,30 @@ const Layout = ({ children, title = 'This is the default title', isAmp }: Props)
   <React.Fragment>
     <Head>
       <title>{title}</title>
-      <meta charSet="utf-8" />
+      <meta charSet='utf-8' />
       {!isAmp && (
-        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+        <meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1' />
       )}
     </Head>
     <header>
       <nav>
-        <Link href="/">
+        <Link href='/'>
           <a>Home( full )</a>
         </Link>{' '}
         |{' '}
-        <Link href="/amp-img">
+        <Link href='/amp-img'>
           <a>amp-img</a>
         </Link>{' '}
         |{' '}
-        <Link href="/hybrid">
+        <Link href='/gdoc'>
+          <a>amp-google-document-embed</a>
+        </Link>{' '}
+        |{' '}
+        <Link href='/share'>
+          <a>amp-social-share</a>
+        </Link>{' '}
+        |{' '}
+        <Link href='/hybrid'>
           <a>Hybrid AMP</a>
         </Link>
       </nav>

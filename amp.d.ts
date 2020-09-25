@@ -77,6 +77,13 @@ declare namespace JSX {
     height: string
   }
 
+  interface AmpSocialShare extends ReactApp {
+    class?: string
+    type: string | 'system' | 'email' | 'facebook' | 'linkedin' | 'pinterest' | 'gplus' | 'tumblr' | 'twitter' | 'whatsapp' | 'line' | 'sms'
+    width?: string
+    height?: string
+  }
+
   interface IntrinsicElements {
     'amp-img': AmpImg
     'amp-sidebar': AmpSidebar
@@ -84,5 +91,6 @@ declare namespace JSX {
     'amp-image-slider': AmpImageSlider
     'amp-carousel': AmpCarousel
     'amp-google-document-embed': AmpGoogleDocumentEmbed
+    'amp-social-share': AmpSocialShare
   }
 }

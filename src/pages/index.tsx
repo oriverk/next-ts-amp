@@ -16,6 +16,7 @@ export default function Index() {
         <div className='content'>
           <h2>Here is Next.js - TypeScript with AMP playground.</h2>
           <p><strong>Eat well, work well, play well and sleep well.</strong></p>
+          <p>Notice: This site is just amp playground, so is not styled yet.</p>
         </div>
       </Layout>
     </React.Fragment>

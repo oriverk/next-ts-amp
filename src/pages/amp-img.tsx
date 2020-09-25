@@ -138,11 +138,11 @@ function AmpCarousel() {
         </h2>
         <p></p>
       </div>
-      <amp-carousel type="slides"
-        width="450" height="300"
-        controls='' loop='' autoplay='' delay="3000"
-        data-next-button-aria-label="Go to next slide" data-previous-button-aria-label="Go to previous slide"
-        role="region" aria-label="Looping carousel">
+      <amp-carousel type='slides'
+        width='450' height='300'
+        controls='' loop='' autoplay='' delay='3000'
+        data-next-button-aria-label='Go to next slide' data-previous-button-aria-label='Go to previous slide'
+        role='region' aria-label='Looping carousel'>
         <amp-img src={shirase.src} width={shirase.width} height={shirase.height}></amp-img>
         <amp-img src={pikachu.src} width={shirase.width} height={shirase.height}></amp-img>
         <amp-img src={perth.src} width={shirase.width} height={shirase.height}></amp-img>
