@@ -2,7 +2,22 @@ declare namespace JSX {
   type ReactAmp = React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLElement>,
     HTMLElement
-  >
+    >
+  
+  // interface AmpCommonAttributes extends ReactApp {
+  //   children?: React.ReactNode
+
+  //   fallback?: ''
+  //   heights?: string
+  //   layouts?: 'nodispaly' | 'fixed' | 'responsive' | 'fixed-height' | 'fill' | 'container' | 'flex-item' | 'intrinsic'
+  //   media?: string
+  //   noloading?: ''
+  //   on?: string
+  //   placeholder?: ''
+  //   sizes?: string
+  //   width?: string
+  //   height?: string
+  // }
   
   interface AmpImg extends ReactAmp {
     children?: React.ReactNode
