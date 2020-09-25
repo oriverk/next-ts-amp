@@ -79,9 +79,23 @@ declare namespace JSX {
 
   interface AmpSocialShare extends ReactApp {
     class?: string
-    type: string | 'system' | 'email' | 'facebook' | 'linkedin' | 'pinterest' | 'gplus' | 'tumblr' | 'twitter' | 'whatsapp' | 'line' | 'sms'
+    type: 'system' | 'email' | 'facebook' | 'linkedin' | 'pinterest' | 'gplus' | 'tumblr' | 'twitter' | 'whatsapp' | 'line' | 'sms' | string
     width?: string
     height?: string
+  }
+
+  interface AmpTwitter extends ReactApp {
+    children: React.ReactNode
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive'
+    width: string
+    height: string
+  }
+
+  interface AmpFacebook extends ReactApp {
+    children: React.ReactNode
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'nodisplay' | 'responsive'
+    width: string
+    height: string
   }
 
   interface IntrinsicElements {
@@ -92,5 +106,10 @@ declare namespace JSX {
     'amp-carousel': AmpCarousel
     'amp-google-document-embed': AmpGoogleDocumentEmbed
     'amp-social-share': AmpSocialShare
+    'amp-twitter': AmpTwitter
+    'amp-facebook': AmpFacebook
+    'amp-facebook-comments': AmpFacebook
+    'amp-facebook-like': AmpFacebook
+    'amp-facebook-page': AmpFacebook
   }
 }

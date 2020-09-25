@@ -35,6 +35,10 @@ const Layout = ({ children, title = 'This is the default title', isAmp }: Props)
           <a>amp-social-share</a>
         </Link>{' '}
         |{' '}
+        <Link href='/sns'>
+          <a>amp-twitter ...</a>
+        </Link>{' '}
+        |{' '}
         <Link href='/hybrid'>
           <a>Hybrid AMP</a>
         </Link>
