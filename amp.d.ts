@@ -68,6 +68,14 @@ declare namespace JSX {
     autoplay?: ''
     delay?: string
   }
+  
+  interface AmpGoogleDocumentEmbed extends ReactApp {
+    children: React.ReactNode
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive'
+    src: string
+    width: string
+    height: string
+  }
 
   interface IntrinsicElements {
     'amp-img': AmpImg
@@ -75,5 +83,6 @@ declare namespace JSX {
     'amp-image-lightbox': AmpImageLightbox
     'amp-image-slider': AmpImageSlider
     'amp-carousel': AmpCarousel
+    'amp-google-document-embed': AmpGoogleDocumentEmbed
   }
 }

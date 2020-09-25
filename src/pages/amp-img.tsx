@@ -40,7 +40,6 @@ export default function Imgs() {
 }
 
 function AmpImg() {
-  // const original = require('@public/assets/shirase.jpg?original')
   const responsiveImage = require('@public/assets/shirase.jpg?resize')
   const responsiveWebp = require('@public/assets/shirase.jpg?resize&format=webp')
   return (
@@ -120,6 +119,7 @@ function AmpImageSlider() {
       </amp-image-slider>
       <style jsx>{`
         amp-img{ max-width: 1000px; }
+        div{ color: white; font-size: 1rem; font-weight:bold;}
       `}</style>
     </React.Fragment>
   )
@@ -139,24 +139,13 @@ function AmpCarousel() {
         <p></p>
       </div>
       <amp-carousel type="slides"
-        width="450"
-        height="300"
-        controls=''
-        loop=''
-        autoplay=''
-        delay="3000" data-next-button-aria-label="Go to next slide"
-        data-previous-button-aria-label="Go to previous slide"
-        role="region"
-        aria-label="Looping carousel">
-        <amp-img src={shirase.src}
-          width={shirase.width}
-          height={shirase.height}></amp-img>
-        <amp-img src={pikachu.src}
-          width={shirase.width}
-          height={shirase.height}></amp-img>
-        <amp-img src={perth.src}
-          width={shirase.width}
-          height={shirase.height}></amp-img>
+        width="450" height="300"
+        controls='' loop='' autoplay='' delay="3000"
+        data-next-button-aria-label="Go to next slide" data-previous-button-aria-label="Go to previous slide"
+        role="region" aria-label="Looping carousel">
+        <amp-img src={shirase.src} width={shirase.width} height={shirase.height}></amp-img>
+        <amp-img src={pikachu.src} width={shirase.width} height={shirase.height}></amp-img>
+        <amp-img src={perth.src} width={shirase.width} height={shirase.height}></amp-img>
       </amp-carousel>
       <style jsx>{`
         amp-img{ max-width: 1000px; }
