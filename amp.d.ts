@@ -2,7 +2,7 @@ declare namespace JSX {
   type ReactAmp = React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLElement>,
     HTMLElement
-    >
+  >
   
   // interface AmpCommonAttributes extends ReactApp {
   //   children?: React.ReactNode
@@ -42,6 +42,7 @@ declare namespace JSX {
     id?: string
     side?: 'left' | 'right'
     layout: 'nodisplay'
+    class?: string
   }
 
   interface AmpImageLightbox extends ReactAmp {
@@ -90,11 +91,55 @@ declare namespace JSX {
     width: string
     height: string
   }
-
+  
   interface AmpFacebook extends ReactApp {
     children: React.ReactNode
     layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'nodisplay' | 'responsive'
     width: string
+    height: string
+  }
+  
+  interface AmpSidebar extends ReactApp {
+    layout: 'nodisplay'
+    side: 'left' | 'right' | undefined
+  }
+  
+  interface AmpAccordion extends ReactApp {
+    children: React.ReactNode
+    layout?: 'container'
+    animate?: ''
+  }
+  
+  interface AmpFixText extends ReactApp {
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive'
+    width: string
+    height: string
+    src: string
+  }
+  
+  interface AmpList extends ReactApp {
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'nodisplay' | 'responsive'
+    temlate?: string
+    width: string
+    height: string
+    credentials?: 'omit' | 'include'
+  }
+
+  interface AmpLiveList extends ReactApp {
+    id: string
+    layout?: 'container' | 'fixed-height'
+    disable?: ''
+  }
+  
+  interface AmpLiveList extends ReactApp {
+    id: string
+    layout?: 'container' | 'fixed-height'
+    disable?: ''
+  }
+
+  interface AmpGist extends ReactApp {
+    children: React.ReactNode
+    layout: 'fixed-height'
     height: string
   }
 
@@ -111,5 +156,11 @@ declare namespace JSX {
     'amp-facebook-comments': AmpFacebook
     'amp-facebook-like': AmpFacebook
     'amp-facebook-page': AmpFacebook
+    'amp-sidebar': AmpSidebar
+    'amp-accordion': AmpAccordion
+    'amp-fix-text': AmpFixText
+    'amp-list': AmpList
+    'amp-live-list': AmpLiveList
+    'amp-gist': AmpGist
   }
 }
