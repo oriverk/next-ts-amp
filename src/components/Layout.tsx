@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import { NavigationDrawer } from './NavigationDrawer'
 
 type Props = {
   children?: ReactNode
   title?: string
-  isAmp?: boolean
+  isAmp: boolean
 }
 
 const Layout = ({ children, title = 'This is the default title', isAmp }: Props) => (
@@ -17,6 +18,9 @@ const Layout = ({ children, title = 'This is the default title', isAmp }: Props)
         <meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1' />
       )}
     </Head>
+    <NavigationDrawer isAmp={isAmp} />
+    {/* @ts-ignore */}
+    <button on='tap:sidebar-left'>open</button>
     <header>
       <nav>
         <Link href='/'>
