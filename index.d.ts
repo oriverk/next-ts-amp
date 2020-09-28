@@ -5,5 +5,5 @@ declare module 'react' {
     // extends React HTMLAttributes
     first?: '' // only for amp-image-slider
     second?: '' // ..
-  }  
+  }
 }
