@@ -3,7 +3,6 @@
 
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { useAmp } from 'next/amp'
 // import { existsGaId, GA_TRACKING_ID } from '../lib/gtag'
 import blogConfig from '../../blog.config'
 
@@ -14,42 +13,10 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    const isAmp = useAmp()
+    // const isAmp = useAmp()
     return (
       <Html lang='en'>
         <Head>
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          {/* {existsGaId ? (
-            <>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-              <script dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }} />
-            </>
-          ) : null} */}
-          {!isAmp && (
-            <amp-analytics type='gtag' data-credentials='include'>
-              <script type="application/json" dangerouslySetInnerHTML={{
-                __html: `{
-              "vars": {
-                "gtag_id": ${blogConfig.gtag},
-                "config" : {
-                  ${blogConfig.gtag}: {
-                    "groups": "default",
-                    "site_speed_sample_rate": 100
-                  }
-                }
-              }
-            }`}} />
-            </amp-analytics>
-          )}
           <meta name='theme-color' content={blogConfig.themeColor} />
           <meta content='developer, ruby, react' name='keywords' />
           <meta property='og:type' content='website' />
@@ -63,6 +30,20 @@ export default class MyDocument extends Document {
           <link rel="alternate" type="application/rss+xml" title={blogConfig.baseName} href="./sitemap.xml" /> */}
         </Head>
         <body>
+          <amp-analytics type="gtag" data-credentials="include">
+            <script type="application/json" dangerouslySetInnerHTML={{
+              __html: `{
+              "vars": {
+                "gtag_id": "UA-131793403-6",
+                "config" : {
+                  "UA-131793403-6": {
+                    "groups": "default",
+                    "site_speed_sample_rate": 100
+                  }
+                }
+              }
+            }`}} />
+          </amp-analytics>
           <Main />
           <NextScript />
         </body>
