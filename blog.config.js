@@ -7,6 +7,7 @@ module.exports = {
   baseUrl: "https://next-ts-amp.oriverk.dev",
   lang: "en_US",
   ogImage: '/assets/home/pikachu.jpg',
+  gtag: 'UA-131793403-6',
   sns: {
     twitter: "not_you_die",
     github: "oriverk",

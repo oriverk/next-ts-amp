@@ -3,6 +3,7 @@
 
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { useAmp } from 'next/amp'
 // import { existsGaId, GA_TRACKING_ID } from '../lib/gtag'
 import blogConfig from '../../blog.config'
 
@@ -13,6 +14,7 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const isAmp = useAmp()
     return (
       <Html lang='en'>
         <Head>
@@ -32,6 +34,22 @@ export default class MyDocument extends Document {
               }} />
             </>
           ) : null} */}
+          {!isAmp && (
+            <amp-analytics type='gtag' data-credentials='include'>
+              <script type="application/json" dangerouslySetInnerHTML={{
+                __html: `{
+              "vars": {
+                "gtag_id": ${blogConfig.gtag},
+                "config" : {
+                  ${blogConfig.gtag}: {
+                    "groups": "default",
+                    "site_speed_sample_rate": 100
+                  }
+                }
+              }
+            }`}} />
+            </amp-analytics>
+          )}
           <meta name='theme-color' content={blogConfig.themeColor} />
           <meta content='developer, ruby, react' name='keywords' />
           <meta property='og:type' content='website' />
