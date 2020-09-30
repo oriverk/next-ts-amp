@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Head from 'next/head'
-import { NavigationDrawer } from './NavigationDrawer'
+import { LeftDrawer } from './NavigationDrawer'
 
 type Props = {
   children?: ReactNode
@@ -9,55 +9,53 @@ type Props = {
   isAmp: boolean
 }
 
-const Layout = ({ children, title = 'This is the default title', isAmp }: Props) => (
+const Layout = ({ children, isAmp }: Props) => (
   <React.Fragment>
     <Head>
-      <title>{title}</title>
-      <meta charSet='utf-8' />
       {!isAmp && (
         <meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1' />
       )}
     </Head>
-    <NavigationDrawer isAmp={isAmp} />
+    <LeftDrawer isAmp={isAmp} />
     {/* @ts-ignore */}
-    <button on='tap:sidebar-left'>open</button>
-    <header>
-      <nav>
-        <Link href='/'>
-          <a>Home( full )</a>
-        </Link>{' '}
-        |{' '}
-        <Link href='/amp-img'>
-          <a>amp-img</a>
-        </Link>{' '}
-        |{' '}
-        <Link href='/gdoc'>
-          <a>amp-google-document-embed</a>
-        </Link>{' '}
-        |{' '}
-        <Link href='/share'>
-          <a>amp-social-share</a>
-        </Link>{' '}
-        |{' '}
-        <Link href='/sns'>
-          <a>amp-twitter ...</a>
-        </Link>{' '}
-        |{' '}
-        <Link href='/hybrid'>
-          <a>Hybrid AMP</a>
-        </Link>
-      </nav>
-    </header>
+    <div className='left swipe-bar' role='button' on='tap:sidebar-left' tabIndex='1' ></div>
+    {/* @ts-ignore */}
+    <div className='left swipe-button' role='button' on='tap:sidebar-left' tabIndex='1'>amp-sidebar button</div>
     <main>
-      {children}
+      <div className='contents'>
+        {children}
+      </div>
     </main>
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
     <style jsx>{`
+      .left.swipe-bar {
+        width: 20px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        z-index: 100;
+      }
+      .left.swipe-button {
+        padding: .5rem;
+        border-radius: .5rem;
+        border: 0.1rem solid #333;
+        font-weight: bold;
+        text-align: center;
+        background-color: #50CAF9;
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        z-index: 100;
+      }
+
       main{
+        width: 100vw;
+        min-height: 100vh;
+      }
+      .contents {
+        color: #EEE;
         width: 100%;
+        min-height: 100vh;
+        background-color: #333;
       }
     `}</style>
   </React.Fragment>

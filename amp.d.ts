@@ -68,6 +68,7 @@ declare namespace JSX {
     loop?: ''
     autoplay?: ''
     delay?: string
+    id?: string
   }
   
   interface AmpGoogleDocumentEmbed extends ReactApp {

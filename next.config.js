@@ -27,7 +27,7 @@ const nextOptimizedImagesConfig = {
   responsive: {
     adapter: require('responsive-loader/sharp'),
     sizes: [640, 960, 1200, 1800],
-    disable: process.env.NODE_ENV === 'development'
+    disable: false // process.env.NODE_ENV === 'development'
   },
   webp: {
     preset: 'default',

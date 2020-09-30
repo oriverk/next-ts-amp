@@ -5,45 +5,67 @@ export const config = {
   amp: true
 }
 
-export function NavigationDrawer({ isAmp }: {
+export function LeftDrawer({ isAmp }: {
   isAmp: boolean
 }) {
   return (
     <React.Fragment>
       {isAmp && (
-        <amp-sidebar id='sidebar-left' class='sample-sidebar' layout='nodisplay' side='left'>
-          <h3>Sidebar</h3>
-          {/* @ts-ignore */}
-          <nav toolbar='(min-width: 784px)' toolbar-target='target-element-left'>
+        <amp-sidebar id='sidebar-left' className='sample-sidebar' layout='nodisplay' side='left'>
+          <h3>amp-sidebar</h3>
+          <nav>
             <ul>
               <li>
                 <Link href='/'><a>Home</a></Link>
               </li>
               <li>
-                <Link href='/'><a>amp-sides</a></Link>
+                <Link href='/amp-sidebar'><a>amp-sidebar</a></Link>
               </li>
               <li>
-                <Link href='/'><a>amp-imgs</a></Link>
+                <Link href='/amp-accordion'><a>amp-accordion</a></Link>
               </li>
               <li>
-                <Link href='/'><a>amp-sns</a></Link>
+                <Link href='/images'><a>amp-imgs</a></Link>
               </li>
               <li>
-                <Link href='/'><a>amp-share</a></Link>
+                <Link href='/amp-sns'><a>amp-sns</a></Link>
               </li>
               <li>
-                <Link href='/'><a>amp-google-document-embed</a></Link>
+                <Link href='/amp-share'><a>amp-share</a></Link>
               </li>
               <li>
-                <Link href='/'><a>amp-gist</a></Link>
+                <Link href='/google-doc'><a>amp-google-document-embed</a></Link>
               </li>
               <li>
-                <Link href='/'><a>hybrid amp page</a></Link>
+                <Link href='/amp-gist'><a>amp-gist</a></Link>
+              </li>
+              <li>
+                <Link href='/hybrid'><a>hybrid amp page</a></Link>
               </li>
             </ul>
           </nav>
         </amp-sidebar>
       )}
+      <style jsx>{`
+        amp-sidebar {
+          background-color: #333;
+          color: #EEE;
+          padding: 1rem;
+        }
+        ul {
+          padding-left: 1.5rem;
+        }
+        li {
+          list-style: none;
+        }
+        a {
+          color: #50CAF9;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      `}</style>
     </React.Fragment>
   )
 }

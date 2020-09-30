@@ -19,14 +19,16 @@ export default function AmpSocialShare() {
             <amp-social-share type='linkedin' aria-label='Share on LinkedIn'></amp-social-share>
             <amp-social-share type='pinterest' aria-label='Share on Pinterest' data-param-media='https://amp.dev/static/samples/img/amp.jpg'></amp-social-share>
             <amp-social-share type='tumblr' aria-label='Share on Tumblr'></amp-social-share>
-            <amp-social-share type='twitter' aria-label='Share on Twitter' data-param-url='https://next-ts-amp.oriverk.dev/share' data-param-text='tweeted from amp-social-share #nextjs #typescript #amp'></amp-social-share>
+            <amp-social-share type='twitter' aria-label='Share on Twitter' data-param-url='https://next-ts-amp.oriverk.dev/amp-share' data-param-text='tweeted from amp-social-share #nextjs #typescript #amp'></amp-social-share>
             <amp-social-share type='whatsapp' aria-label='Share on WhatsApp'></amp-social-share>
             <amp-social-share type='line' aria-label='Share on Line'></amp-social-share>
           </div>
         </div>
       </Layout>
       <style jsx>{`
-        .rounded {
+        amp-social-share {
+          width: 2rem;
+          margin: 0 1rem;
           border-radius: 50%;
         }
       `}</style>
