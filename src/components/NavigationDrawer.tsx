@@ -19,6 +19,9 @@ export function LeftDrawer({ isAmp }: {
                 <Link href='/'><a>Home</a></Link>
               </li>
               <li>
+                <Link href='/search-demo'><a>search-algolia-demo</a></Link>
+              </li>
+              <li>
                 <Link href='/amp-sidebar'><a>amp-sidebar</a></Link>
               </li>
               <li>
@@ -38,6 +41,9 @@ export function LeftDrawer({ isAmp }: {
               </li>
               <li>
                 <Link href='/amp-gist'><a>amp-gist</a></Link>
+              </li>
+              <li>
+                <Link href='/404'><a>404</a></Link>
               </li>
               <li>
                 <Link href='/hybrid'><a>hybrid amp page</a></Link>
