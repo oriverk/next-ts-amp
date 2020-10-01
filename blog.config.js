@@ -6,8 +6,8 @@ module.exports = {
   desc: "Next.js Typescript with AMP Playground",
   baseUrl: "https://next-ts-amp.oriverk.dev",
   lang: "en_US",
-  ogImage: '/assets/home/pikachu.jpg',
-  gtag: 'UA-131793403-6',
+  ogImage: "/assets/home/pikachu.jpg",
+  gtag: "UA-131793403-6",
   sns: {
     twitter: "not_you_die",
     github: "oriverk",
@@ -16,8 +16,8 @@ module.exports = {
     linkedin: "kawanoyudai"
   },
   algolia: {
-    indexName: 'prod_blogOriverkdev',
-    appId: 'WOHC62BVSP',
-    searchOnlyApiKey: 'c858d2926cafc635503658417e963722'
+    indexName: "prod_blogOriverkdev",
+    appId: "WOHC62BVSP",
+    searchOnlyApiKey: "c858d2926cafc635503658417e963722"
   }
 }

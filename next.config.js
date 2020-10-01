@@ -1,7 +1,15 @@
 const withPlugins = require('next-compose-plugins')
 
+const withPwa = require('next-pwa')
 const optimizedImages = require('next-optimized-images')
 const { resolve } = require('path')
+
+const nextPwaConfig = {
+  pwa: {
+    disable: process.env.NODE_ENV === 'development',
+    dest: 'public'
+  }
+}
 
 const nextConfig = {
   webpack: (config) => {
@@ -37,6 +45,9 @@ const nextOptimizedImagesConfig = {
 
 module.exports = withPlugins(
   [
+    [
+      withPwa, nextPwaConfig
+    ],
     [
       optimizedImages, nextOptimizedImagesConfig
     ],
