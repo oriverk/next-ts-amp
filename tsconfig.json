@@ -27,6 +27,6 @@
   ],
   "include": [
     "**/*.ts",
-    "**/*.tsx", "src/pages/_document.js"
+    "**/*.tsx", "src/pages/_document.js", "src/components/amp/AmpScript.js", "src/components/amp/AmpCustomElement.js"
   ]
 }

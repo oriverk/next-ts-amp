@@ -144,6 +144,16 @@ declare namespace JSX {
     height: string
   }
 
+  interface AmpScript extends ReactApp {
+    children?: React.ReactNode,
+    id?: string,
+    src?: string,
+    script: any,
+    width?: string,
+    height?: string,
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive',
+  }
+
   interface IntrinsicElements {
     'amp-img': AmpImg
     'amp-sidebar': AmpSidebar
@@ -163,5 +173,6 @@ declare namespace JSX {
     'amp-list': AmpList
     'amp-live-list': AmpLiveList
     'amp-gist': AmpGist
+    'amp-script': AmpScript
   }
 }
