@@ -2,7 +2,10 @@
 // Event handlers like onClick can't be added to this file
 
 import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, {
+  Html, Head, Main, NextScript,
+  // DocumentContext
+} from 'next/document'
 // import { existsGaId, GA_TRACKING_ID } from '../lib/gtag'
 import blogConfig from '../../blog.config'
 
@@ -13,7 +16,6 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    // const isAmp = useAmp()
     return (
       <Html lang='en'>
         <Head>
@@ -32,17 +34,16 @@ export default class MyDocument extends Document {
         <body>
           <amp-analytics type="gtag" data-credentials="include">
             <script type="application/json" dangerouslySetInnerHTML={{
-              __html: `{
-              "vars": {
-                "gtag_id": "UA-131793403-6",
-                "config" : {
-                  "UA-131793403-6": {
-                    "groups": "default",
-                    "site_speed_sample_rate": 100
+              __html: JSON.stringify({
+                vars: {
+                  gtag_id: blogConfig.gtag,
+                  config: {
+                    [blogConfig.gtag]: { groups: "default" }
                   }
                 }
-              }
-            }`}} />
+              })
+            }}>
+            </script>
           </amp-analytics>
           <Main />
           <NextScript />
