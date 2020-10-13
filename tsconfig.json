@@ -20,13 +20,15 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
     "**/*.ts",
-    "**/*.tsx", "src/pages/_document.js", "src/components/amp/AmpScript.js", "src/components/amp/AmpCustomElement.js"
+    "**/*.tsx",
+    "src/pages/_document.tsx",
+    "src/components/amp/AmpScript.js"
   ]
 }

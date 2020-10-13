@@ -148,10 +148,10 @@ declare namespace JSX {
     children?: React.ReactNode,
     id?: string,
     src?: string,
-    script: any,
+    script?: any,
     width?: string,
     height?: string,
-    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive',
+    layout?: 'fill' | 'fixed' | 'fixed-height' | 'flex-item' | 'intrinsic' | 'nodisplay' | 'responsive'| 'container'
   }
 
   interface IntrinsicElements {

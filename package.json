@@ -9,6 +9,8 @@
     "bs": "next build && next start"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.4",
+    "@types/styled-jsx": "^2.2.8",
     "algoliasearch": "^4.5.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",

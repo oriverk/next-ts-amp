@@ -4,7 +4,7 @@ module.exports = {
   backgroundColor: "#212121",
   themeColor: "#212121",
   desc: "Next.js Typescript with AMP Playground",
-  baseUrl: "https://next-ts-amp.oriverk.dev",
+  baseUrl: "https://play.oriverk.dev",
   lang: "en_US",
   ogImage: "/assets/home/pikachu.jpg",
   gtag: "UA-131793403-6",

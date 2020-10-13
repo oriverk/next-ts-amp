@@ -1403,6 +1403,14 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/hoist-non-react-statics@*":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/json-schema@^7.0.5":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
@@ -1445,6 +1453,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native@*":
+  version "0.63.25"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.25.tgz#a08bbe17a75cce993f52655a8fe75f30bf77e965"
+  integrity sha512-cRm+1iQecewpFYOArYJoM1qGd0JpFJ6f97KqIy9H2GawAdWkgyarSk8CBy4SMt2WOtPkysCu2EG7UwIT3vNeaA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.9.16":
   version "16.9.49"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.49.tgz#09db021cf8089aba0cdb12a49f8021a69cce4872"
@@ -1464,6 +1479,23 @@
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
   integrity sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
+
+"@types/styled-components@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.4.tgz#11f167dbde268635c66adc89b5a5db2e69d75384"
+  integrity sha512-78f5Zuy0v/LTQNOYfpH+CINHpchzMMmAt9amY2YNtSgsk1TmlKm8L2Wijss/mtTrsUAVTm2CdGB8VOM65vA8xg==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    "@types/react-native" "*"
+    csstype "^3.0.2"
+
+"@types/styled-jsx@^2.2.8":
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/@types/styled-jsx/-/styled-jsx-2.2.8.tgz#b50d13d8a3c34036282d65194554cf186bab7234"
+  integrity sha512-Yjye9VwMdYeXfS71ihueWRSxrruuXTwKCbzue4+5b2rjnQ//AtyM7myZ1BEhNhBQ/nL/RE7bdToUoLln2miKvg==
+  dependencies:
+    "@types/react" "*"
 
 "@types/tapable@*":
   version "1.0.6"
@@ -4323,6 +4355,13 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+hoist-non-react-statics@^3.3.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+  dependencies:
+    react-is "^16.7.0"
+
 hosted-git-info@^2.1.4:
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
@@ -6576,7 +6615,7 @@ react-instantsearch-dom@^6.7.0:
     prop-types "^15.5.10"
     react-instantsearch-core "^6.7.0"
 
-react-is@16.13.1, react-is@^16.8.1:
+react-is@16.13.1, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
