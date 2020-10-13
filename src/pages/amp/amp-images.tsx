@@ -1,20 +1,35 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import { useAmp } from 'next/amp'
+import css from 'styled-jsx/css'
+import { AmpLayout } from '../../components/AmpLayout'
 
 export const config = {
   amp: true
 }
 
 const shirase = require('@public/assets/shirase.jpg?resize')
+const shiraseWebp = require('@public/assets/shirase.jpg?resize&format=webp')
 const pikachu = require('@public/assets/pikachu.jpg?resize')
+const pikachuLqip = require('@public/assets/pikachu.jpg?lqip')
 const perth = require('@public/assets/perth.jpg?resize')
 
-export default function Imgs() {
-  const isAmp = useAmp()
+const style = css`
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #424242;
+    color: #EEE;
+    text-align: center;
+  }
+  .container div {
+    border-bottom: .1rem solid #EEE;
+    padding: 0 2rem 2rem;
+  }
+`
+
+const Component: React.FC = () => {
   return (
-    <React.Fragment>
-      <Layout isAmp={isAmp}>
+    <>
+      <AmpLayout>
         <div className='container'>
           <h1>This is Full AMP mode page</h1> 
           <div className='amp-img'>
@@ -30,30 +45,34 @@ export default function Imgs() {
             <AmpCarousel />
           </div>
         </div>
-      </Layout>
-      <style jsx>{`
-        .container {
-          width: 100%;
-          max-width: 800px;
-          margin: 0 auto;
-          background-color: #424242;
-          color: #EEE;
-          text-align: center;
-        }
-        .container div {
-          border-bottom: .1rem solid #EEE;
-          padding: 0 2rem 2rem;
-        }
-      `}</style>
-    </React.Fragment>
+      </AmpLayout>
+      <style jsx>{style}</style>
+    </>
   )
 }
 
-function AmpImg() {
-  const responsiveImage = require('@public/assets/shirase.jpg?resize')
-  const responsiveWebp = require('@public/assets/shirase.jpg?resize&format=webp')
+export default Component
+
+const commonStyle = css`
+  a {
+    color: #50CAF9;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .title a {
+    color: #EEE;
+    text-decoration: none;
+  }
+  .title a:hover {
+    text-decoration: underline #50CAF9;
+  }
+`
+
+const AmpImg: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <h2 className='title'><a href='#amp-img'>amp-img with next-optimized-images</a></h2>
       <p>
         <a href='https://amp.dev/ja/documentation/components/amp-img/?format=websites' target='_blank' rel='noopener noreferrer'>the link of amp-img is here</a>
@@ -62,44 +81,30 @@ function AmpImg() {
         <a href='https://github.com/cyrilwanner/next-optimized-images' target='_blank' rel='noopener noreferrer'>next-optimized-images </a>
         は画像を自動的に最適化するパッケージ及びプラグインで、このページでは主にjpgからwebpへの変換と複数サイズの画像の生成をしている。
       </p>
-      <amp-img alt='shirase'
-        width={responsiveWebp.width}
-        height={responsiveWebp.height}
-        src={responsiveWebp.src}
-        srcset={responsiveWebp.srcSet}
-        layout='responsive'>
-      <amp-img
-        fallback=''
-        alt='shirase'
-        width={responsiveImage.width}
-        height={responsiveImage.height}
-        src={responsiveImage.src}
-        srcset={responsiveImage.srcSet}
-      ></amp-img>
+      <amp-img alt='shirase' layout='responsive'
+        width={shiraseWebp.width} height={shiraseWebp.height}
+        src={shiraseWebp.src} srcset={shiraseWebp.srcSet}
+      >
+        <amp-img
+          fallback='' alt='shirase'
+          width={shirase.width} height={shirase.height}
+          src={shirase.src} srcset={shirase.srcSet}
+        ></amp-img>
       </amp-img>
+      <style jsx>{commonStyle}</style>
       <style jsx>{`
-        a {
-          color: #50CAF9;
-        }
-        .title a {
-          color: #EEE;
-          text-decoration: none;
-        }
-        .title a:hover{
-          text-decoration: underline #50CAF9;
-        }
         amp-img {
           width: 95%;
           margin: 0 auto;
         }
       `}</style>
-    </React.Fragment>
+    </>
   )
 }
 
-function AmpImageLightbox() {
+const AmpImageLightbox: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <div className='desc'>
         <h2 className='title'><a href='#amp-image-lightbox'>amp-image-lightbox and figcaption</a></h2>
         <p>
@@ -118,21 +123,8 @@ function AmpImageLightbox() {
         <div id='imageDescription'>This is a wild pikachu in Perth WA. Australia.</div>
         <amp-img on='tap:lightbox1' role='button' tabindex='0' layout='responsive' className='pikachu' aria-describedby='imageDescription' width={pikachu.width} height={pikachu.height} src={pikachu.src}></amp-img>
       </div>
+      <style jsx>{commonStyle}</style>
       <style jsx>{`
-        a {
-          color: #50CAF9;
-          text-decoration: none;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-        .title a {
-          color: #EEE;
-          text-decoration: none;
-        }
-        .title a:hover {
-          text-decoration: underline #50CAF9;
-        }
         .image-container {
           width: 95%;
           margin: 0 auto;
@@ -142,14 +134,13 @@ function AmpImageLightbox() {
           width: 100%;
         }
       `}</style>
-    </React.Fragment>
+    </>
   )
 }
 
-function AmpImageSlider() {
-  const lqip = require('@public/assets/pikachu.jpg?lqip')
+const AmpImageSlider = () => {
   return (
-    <React.Fragment>
+    <>
       <div className='desc'>
         <h2 className='title'><a href='#amp-image-slider'>amp-image-slider</a></h2>
         <p id='amp-image-slider'>
@@ -163,26 +154,13 @@ function AmpImageSlider() {
       </div>
       {/* @ts-ignore */}
       <amp-image-slider layout='responsive' width='300' height='200' class='triangle-hint'>
-        <amp-img src={lqip} alt='lqip of pikachu' layout='fill'></amp-img>
+        <amp-img src={pikachuLqip} alt='lqip of pikachu' layout='fill'></amp-img>
         <amp-img src={pikachu.src} alt='pikachu' layout='fill'></amp-img>
         <div first='' className='label label-left-center'>this is pikachu lqip</div>
         <div second='' className='label label-right-center'>this is pikachu</div>
       </amp-image-slider>
+      <style jsx>{commonStyle}</style>
       <style jsx>{`
-        a {
-          color: #50CAF9;
-          text-decoration: none;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-        .title a {
-          color: #EEE;
-          text-decoration: none;
-        }
-        .title a:hover {
-          text-decoration: underline #50CAF9;
-        }
         amp-image-slider {
           width: 95%;
         }
@@ -208,13 +186,13 @@ function AmpImageSlider() {
           transform: translateY(-50%);
         }
       `}</style>
-    </React.Fragment>
+    </>
   )
 }
 
-function AmpCarousel() {
+const AmpCarousel: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <div className='desc'>
         <h2 className='title'><a href='#amp-carousel'>amp-carousel</a></h2>
         <p>
@@ -235,86 +213,47 @@ function AmpCarousel() {
         </amp-carousel>
       </div>
       <div className='carousel2'>
-        <amp-carousel
-          id='carousel-with-preview'
-          width='450'
-          height='300'
-          layout='responsive'
-          type='slides'
-          role='region'
-          aria-label='Carousel with slide previews'
+        <amp-carousel id='carousel-with-preview' layout='responsive'
+          width='450' height='300'
+          type='slides' role='region' aria-label='Carousel with slide previews'
         >
-          <amp-img
-            src={pikachu.src}
-            width={pikachu.width}
-            height={pikachu.height}
-            layout='responsive'
-            alt='pikachu'
+          <amp-img layout='responsive' alt='pikachu'
+            src={pikachu.src} width={pikachu.width} height={pikachu.height}
           ></amp-img>
-          <amp-img
-            src={shirase.src}
-            width={shirase.width}
-            height={shirase.height}
-            layout='responsive'
-            alt='shirase'
+          <amp-img layout='responsive' alt='shirase'
+            src={shirase.src} width={shirase.width} height={shirase.height}
           ></amp-img>
-          <amp-img
-            src={perth.src}
-            width={perth.width}
-            height={perth.height}
-            layout='responsive'
-            alt='perth'
+          <amp-img layout='responsive' alt='perth'
+            src={perth.src} width={perth.width} height={perth.height}
           ></amp-img>
         </amp-carousel>
         <div className='carousel-preview'>
           {/* @ts-ignore */}
           <button on='tap:carousel-with-preview.goToSlide(index=0)'>
-            <amp-img
-              src={pikachu.src}
-              width='60'
-              height='40'
-              alt='pikachu'
+            <amp-img alt='pikachu'
+              src={pikachu.src} width='60' height='40'
             ></amp-img>
           </button>
           {/* @ts-ignore */}
           <button on='tap:carousel-with-preview.goToSlide(index=1)'>
-            <amp-img
-              src={shirase.src}
-              width='60'
-              height='40'
-              alt='shirase'
-              ></amp-img>
+            <amp-img alt='shirase'
+              src={shirase.src} width='60' height='40'
+            ></amp-img>
           </button>
           {/* @ts-ignore */}
           <button on='tap:carousel-with-preview.goToSlide(index=2)'>
-            <amp-img
-              src={perth.src}
-              width='60'
-              height='40'
-              alt='perth'
+            <amp-img alt='perth'
+              src={perth.src} width='60' height='40'
             ></amp-img>
           </button>
         </div>
       </div>
+      <style jsx>{commonStyle}</style>
       <style jsx>{`
-        a {
-          color: #50CAF9;
-          text-decoration: none;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-        .title a {
-          color: #EEE;
-          text-decoration: none;
-        }
-        .title a:hover {
-          text-decoration: underline #50CAF9;
-        }
         amp-carousel {
           width: 100%;
         }
       `}</style>
-    </React.Fragment>
+    </>
   )
 }

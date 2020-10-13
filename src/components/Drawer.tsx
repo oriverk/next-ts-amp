@@ -5,11 +5,13 @@ export const config = {
   amp: true
 }
 
-export function LeftDrawer({ isAmp }: {
+type Props = {
   isAmp: boolean
-}) {
+}
+
+export function LeftDrawer({ isAmp }: Props ) {
   return (
-    <React.Fragment>
+    <>
       {isAmp && (
         <amp-sidebar id='sidebar-left' className='sample-sidebar' layout='nodisplay' side='left'>
           <h3>amp-sidebar</h3>
@@ -20,6 +22,9 @@ export function LeftDrawer({ isAmp }: {
               </li>
               <li>
                 <Link href='/search-demo'><a>search-algolia-demo</a></Link>
+              </li>
+              <li>
+                <Link href='/search-mine'><a>search-my-algolia</a></Link>
               </li>
               <li>
                 <Link href='/amp-sidebar'><a>amp-sidebar</a></Link>
@@ -72,6 +77,6 @@ export function LeftDrawer({ isAmp }: {
           text-decoration: underline;
         }
       `}</style>
-    </React.Fragment>
+    </>
   )
 }

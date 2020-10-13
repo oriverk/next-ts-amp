@@ -1,0 +1,124 @@
+{
+  "results": [
+    {
+      "hits": [
+        {
+          "name": "LEGO Dimensions - Sonic the Hedgehog™ Level Pack",
+          "description": "Speed through iconic virtual landscapes with this LEGO Dimensions Sonic the Hedgehog expansion pack. Build Sonic and two vehicle accessories, and use the added functionality to chase rings or race through other levels in Dimensions play. This LEGO Dimensions Sonic the Hedgehog expansion pack comes with three collectible figurines.",
+          "brand": "LEGO Dimensions",
+          "categories": [
+            "Video Games",
+            "Toys to Life",
+            "Lego Dimensions"
+          ],
+          "hierarchicalCategories": {
+            "lvl0": "Video Games",
+            "lvl1": "Video Games > Toys to Life",
+            "lvl2": "Video Games > Toys to Life > Lego Dimensions"
+          },
+          "type": "Toy 2 life character",
+          "price": 29.99,
+          "price_range": "1 - 50",
+          "image": "https://cdn-demo.algolia.com/bestbuy-0118/5563200_sb.jpg",
+          "url": "https://api.bestbuy.com/click/-/5563200/pdp",
+          "free_shipping": true,
+          "rating": 4,
+          "popularity": 20249,
+          "objectID": "5563200",
+          "_snippetResult": {
+            "description": {
+              "value": "… this LEGO Dimensions Sonic the __ais-highlight__Hedgehog__/ais-highlight__ expansion pack. Build Sonic …",
+              "matchLevel": "full"
+            }
+          },
+          "_highlightResult": {
+            "name": {
+              "value": "LEGO Dimensions - Sonic the __ais-highlight__Hedgehog__/ais-highlight__™ Level Pack",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "hogehog"
+              ]
+            },
+            "description": {
+              "value": "Speed through iconic virtual landscapes with this LEGO Dimensions Sonic the __ais-highlight__Hedgehog__/ais-highlight__ expansion pack. Build Sonic and two vehicle accessories, and use the added functionality to chase rings or race through other levels in Dimensions play. This LEGO Dimensions Sonic the __ais-highlight__Hedgehog__/ais-highlight__ expansion pack comes with three collectible figurines.",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "hogehog"
+              ]
+            },
+            "brand": {
+              "value": "LEGO Dimensions",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "categories": [
+              {
+                "value": "Video Games",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Toys to Life",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Lego Dimensions",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "type": {
+              "value": "Toy 2 life character",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        }
+      ],
+      "nbHits": 1,
+      "page": 0,
+      "nbPages": 1,
+      "hitsPerPage": 16,
+      "facets": {
+        "brand": {
+          "LEGO Dimensions": 1
+        },
+        "price": {
+          "29.99": 1
+        },
+        "rating": {
+          "4": 1
+        },
+        "free_shipping": {
+          "true": 1
+        },
+        "hierarchicalCategories.lvl0": {
+          "Video Games": 1
+        }
+      },
+      "facets_stats": {
+        "price": {
+          "min": 29.99,
+          "max": 29.99,
+          "avg": 29.99,
+          "sum": 29.99
+        },
+        "rating": {
+          "min": 4,
+          "max": 4,
+          "avg": 4,
+          "sum": 4
+        }
+      },
+      "exhaustiveFacetsCount": true,
+      "exhaustiveNbHits": true,
+      "query": "hogehog",
+      "params": "query=hogehog&hitsPerPage=16&maxValuesPerFacet=10&page=0&removeWordsIfNoResults=allOptional&highlightPreTag=__ais-highlight__&highlightPostTag=__%2Fais-highlight__&attributesToSnippet=%5B%22description%3A10%22%5D&snippetEllipsisText=%E2%80%A6&facets=%5B%22brand%22%2C%22free_shipping%22%2C%22price%22%2C%22rating%22%2C%22hierarchicalCategories.lvl0%22%5D&tagFilters=",
+      "index": "instant_search",
+      "processingTimeMS": 2
+    }
+  ]
+}
