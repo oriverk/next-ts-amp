@@ -1,4 +1,4 @@
-import Head from 'next/head'
+// import Head from 'next/head'
 import css from 'styled-jsx/css'
 import { AmpLayout } from '../../components/AmpLayout'
 import blogConfig from '../../../blog.config'
@@ -27,11 +27,12 @@ const style = css`
 const Component: React.FC = () => {
   const algolia = '/amp-script/algolia-demo.js'
   const algoliaSrc = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' + algolia : blogConfig.baseUrl + algolia;
+  // const algoliaSrc = blogConfig.baseUrl + algolia;
   return (
     <AmpLayout>
-      <Head>
+      {/* <Head>
         <meta name='amp-script-src' content='sha384-rJERHZAAudMEmD_2_q7bgbw9_pB_jgAWhx54YynyC4bDHUDxasCRoAJkfjGnco3D' />
-      </Head>
+      </Head> */}
       <div className='container'>
         <div className='content'>
           <amp-script layout='container' src={algoliaSrc} >

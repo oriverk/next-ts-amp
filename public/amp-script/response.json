@@ -3,6 +3,46 @@
     {
       "hits": [
         {
+          "id": "20200203-setup-frontend-ubuntu",
+          "title": "Build FrontEnd environment on Ubuntu",
+          "create": "2020-02-03",
+          "update": "2020-09-15",
+          "tags": [
+            "node",
+            "ubuntu"
+          ],
+          "content": " from Gist oriverk InstallLanguage Ubuntu md Setup Nodejs rails uses webpacker which needs nodejs yarn create-react-app create react-apps create next-app not to use npm or yarn Reference npmjs com nodejs org yarn - how to install yarn on ubuntu debian Others create react app - getting start -nextjs getting started package json engines Node js yarn npm install ",
+          "objectID": "1120501000",
+          "_highlightResult": {
+            "title": {
+              "value": "__ais-highlight__Build__/ais-highlight__ FrontEnd __ais-highlight__environment__/ais-highlight__ on Ubuntu",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "build",
+                "enviroment"
+              ]
+            },
+            "tags": [
+              {
+                "value": "node",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "ubuntu",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "content": {
+              "value": " from Gist oriverk InstallLanguage Ubuntu md Setup Nodejs rails uses webpacker which needs nodejs yarn create-react-app create react-apps create next-app not to use npm or yarn Reference npmjs com nodejs org yarn - how to install yarn on ubuntu debian Others create react app - getting start -nextjs getting started package json engines Node js yarn npm install ",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        {
           "id": "20200203-setup-go-ubuntu",
           "title": "Build Go environment on ubuntu",
           "create": "2020-02-03",
@@ -15,24 +55,16 @@
           "objectID": "1120500000",
           "_highlightResult": {
             "title": {
-              "value": "<em>Build</em> <em>Go</em> <em>environment</em> on ubuntu",
+              "value": "__ais-highlight__Build__/ais-highlight__ Go __ais-highlight__environment__/ais-highlight__ on ubuntu",
               "matchLevel": "full",
               "fullyHighlighted": false,
               "matchedWords": [
                 "build",
-                "go",
-                "environment"
+                "enviroment"
               ]
             },
             "tags": [
-              {
-                "value": "<em>go</em>",
-                "matchLevel": "partial",
-                "fullyHighlighted": true,
-                "matchedWords": [
-                  "go"
-                ]
-              },
+              { "value": "go", "matchLevel": "none", "matchedWords": [] },
               {
                 "value": "ubuntu",
                 "matchLevel": "none",
@@ -40,68 +72,24 @@
               }
             ],
             "content": {
-              "value": " from Gist oriverk InstallLanguage Ubuntu md Setup Golang Use goenv to install <em>Go</em> goenv is package management tool which based on rbenv Reference golang org Others A Tour of <em>Go</em> Learn Web Programming in <em>Go</em> by Examples <em>Go</em> #golangtokyo <em>Go</em> by mercari",
-              "matchLevel": "partial",
-              "fullyHighlighted": false,
-              "matchedWords": [
-                "go"
-              ]
-            }
-          }
-        },
-        {
-          "id": "20200203-setup-rust-ubuntu",
-          "title": "Build Rust environment on Ubuntu",
-          "create": "2020-02-03",
-          "update": "2020-07-30",
-          "tags": [
-            "rust",
-            "ubuntu"
-          ],
-          "content": " from Gist oriverk InstallLanguage Ubuntu md Setup Reference rust-lang org en Rust Japanese Docs for Rust easy rust document en Others An inside look at the Rust programming language Qiita Rust Why Discord is switching from Go to Rust Go Rust Discord ",
-          "objectID": "1120497000",
-          "_highlightResult": {
-            "title": {
-              "value": "<em>Build</em> Rust <em>environment</em> on Ubuntu",
-              "matchLevel": "partial",
-              "fullyHighlighted": false,
-              "matchedWords": [
-                "build",
-                "environment"
-              ]
-            },
-            "tags": [
-              {
-                "value": "rust",
-                "matchLevel": "none",
-                "matchedWords": []
-              },
-              {
-                "value": "ubuntu",
-                "matchLevel": "none",
-                "matchedWords": []
-              }
-            ],
-            "content": {
-              "value": " from Gist oriverk InstallLanguage Ubuntu md Setup Reference rust-lang org en Rust Japanese Docs for Rust easy rust document en Others An inside look at the Rust programming language Qiita Rust Why Discord is switching from <em>Go</em> to Rust <em>Go</em> Rust Discord ",
-              "matchLevel": "partial",
-              "fullyHighlighted": false,
-              "matchedWords": [
-                "go"
-              ]
+              "value": " from Gist oriverk InstallLanguage Ubuntu md Setup Golang Use goenv to install Go goenv is package management tool which based on rbenv Reference golang org Others A Tour of Go Learn Web Programming in Go by Examples Go #golangtokyo Go by mercari",
+              "matchLevel": "none",
+              "matchedWords": []
             }
           }
         }
       ],
-      "nbHits": 2,
+      "nbHits": 10,
       "page": 0,
       "nbPages": 1,
-      "hitsPerPage": 20,
+      "hitsPerPage": 16,
+      "facets": {},
+      "exhaustiveFacetsCount": true,
       "exhaustiveNbHits": true,
-      "query": "build go environment",
-      "params": "query=build go environment",
+      "query": "build enviroment",
+      "params": "query=build enviroment&hitsPerPage=16&maxValuesPerFacet=10&page=0&removeWordsIfNoResults=allOptional&highlightPreTag=__ais-highlight__&highlightPostTag=__%2Fais-highlight__&attributesToSnippet=%5B%22description%3A10%22%5D&snippetEllipsisText=%E2%80%A6&facets=%5B%22brand%22%2C%22free_shipping%22%2C%22price%22%2C%22rating%22%2C%22hierarchicalCategories.lvl0%22%5D&tagFilters=",
       "index": "prod_blogOriverkdev",
-      "processingTimeMS": 1
+      "processingTimeMS": 2
     }
   ]
 }
